@@ -4,7 +4,7 @@ package com.coolmq.amqp.util;
  * <p><b>Description:</b> 常量类 <p>
  * <b>Company:</b> 
  *
- * @author created by hongda at 22:49 on 2017-10-23
+ * @author created by hongda at 22:49 on 2020-07-19
  * @version V0.1
  */
 public class RabbitMetaMessage {

@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @author fw
+ * @author wangh
  */
 
 @SpringBootApplication(scanBasePackages = {"com.coolmq.amqp","com.itmuch.cloud.study"})

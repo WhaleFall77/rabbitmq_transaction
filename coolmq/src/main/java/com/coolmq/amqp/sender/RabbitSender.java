@@ -23,7 +23,7 @@ import java.util.UUID;
  * <p><b>Description:</b> RabbitMQ消息发送者
  * <p><b>Company:</b> 
  *
- * @author created by hongda at 13:03 on 2017-10-24
+ * @author created by wangh at 13:03 on 2020-07-11
  * @version V0.1
  */
 

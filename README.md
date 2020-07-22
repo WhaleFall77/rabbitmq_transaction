@@ -18,13 +18,8 @@ microservice-demo们为spring-boot集成demo
 5. provider中加入 @TransMessage包裹业务操作即可
 6. 代码使用示例请参考microservice-message-demo
 
-## 视频教程
-[《Spring Cloud分布式事务(一):Rabbitmq基础》](https://segmentfault.com/l/1500000015339065)  
-[《Spring Cloud分布式事务(二):原理与源码》](https://segmentfault.com/l/1500000012729662)  
-[《Spring Cloud分布式事务(三):深入补偿机制》](https://segmentfault.com/l/1500000016673126)
-
 # coolmq 用rabbitmq解决分布式事务
-传统的事务解决方案，例如TCC，都太消耗资源，而rabbitmq用两阶段确认确保了消息只要发送，就能送达。本方案是基于Spring-Boot Amqp，已经在生产上部署实践，可用于支付等跨服务调用的业务情况
+传统的事务解决方案，例如TCC，都太消耗资源，而rabbitmq用两阶段确认确保了消息只要发送，就能送达。本方案是基于Spring-Boot Amqp，后续会在生产上部署实践，可用于跨服务调用的业务情况
 
 ## 一 两阶段确认
 ### 1 发送确认
@@ -99,3 +94,6 @@ rabbitmq提供了确认ack机制，可以用来确认消息是否有返回。因
 ### 6 消费者业务处理异常
 消息监听接受消息并处理，假设抛异常了，第一阶段事物已经完成，如果要配置回滚则过于麻烦，即使做事务补偿也可能事务补偿失效的情况，所以这里可以做一个重复执行，比如guava的retry，设置一个指数时间来循环执行，如果n次后依然失败，发邮件、短信，用人肉来兜底。
 参考：http://blog.csdn.net/reviveds...
+
+## 补充
+该项目中在microservice-message-demo中包含了关于自定义注解的demo，后面会移出来

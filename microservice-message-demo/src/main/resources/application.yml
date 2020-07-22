@@ -1,4 +1,3 @@
-
 #eureka:
 #  client:
 #    serviceUrl:
@@ -21,18 +20,28 @@ spring:
     name: microservice-message-provdier
 
 #mq config
-#spring.rabbitmq.address: localhost:5672
+#spring.rabbitmq.address: rabbitMQ默认为5672
 spring.rabbitmq.host: localhost
 spring.rabbitmq.port: 5672
-spring.rabbitmq.username: fanglaosi
-spring.rabbitmq.password: fanglaosi
+#rabbitMQ的用户密码
+spring.rabbitmq.username: guest
+spring.rabbitmq.password: guest
+
 spring.rabbitmq.listener.concurrency: 5
 spring.rabbitmq.listener.max-concurrency: 20
 spring.rabbitmq.listener.retry.enabled: true
-spring.rabbitmq.virtual.host: laosiji
+#虚拟主机路径
+spring.rabbitmq.virtual.host: /
 spring.rabbitmq.cache.channel.size: 100
+# 消息发送确认与消息接收确认 配置
 spring.rabbitmq.listener.acknowledge-mode: manual
+#可以确保消息在未被队列接收时返回
 spring.rabbitmq.listener.publish-returns: true;
+#设置此属性配置可以确保消息成功发送到交换器
+#spring.rabbitmq.publisher-confirms: true
+#在使用上面的属性配置时通常会和mandatory属性配合一起使用：指定消息在没有被队列接收时是否强行退回还是直接丢弃
+#spring.rabbitmq.template.mandatory: true
+
 
 #redis config
 redis.host: localhost

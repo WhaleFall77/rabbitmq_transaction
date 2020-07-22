@@ -28,7 +28,7 @@ import com.rabbitmq.client.Channel;
  * <p><b>Description:</b> RabbitMQ交换机、队列的配置类.定义交换机、key、queue并做好绑定。
  * <p><b>Company:</b>
  *
- * @author created by fw at 21:54 on 2017-12-23
+ * @author created by wangh at 21:54 on 2020-06-23
  * @version V0.1
  */
 @Configuration

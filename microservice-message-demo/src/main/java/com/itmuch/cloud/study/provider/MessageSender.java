@@ -1,12 +1,12 @@
 package com.itmuch.cloud.study.provider;
 
-import java.util.Date;
-
-//import com.coolmq.amqp.annotation.TransMessage;
 import com.coolmq.amqp.annotation.TransMessage;
+import java.util.Date;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+//import com.coolmq.amqp.annotation.TransMessage;
 
 @Component
 public class MessageSender {
@@ -25,5 +25,12 @@ public class MessageSender {
 	public String transSend(){
 		System.out.println("........trangsmsg send...........");
 		return "hello world";
+	}
+
+	@TransMessage(exchange = "wangh",bindingKey = "key.transmsg", bizName = "transtest",
+		dbCoordinator = "DBRedisCoordinator")
+	public String saySomeThing(){
+		System.out.println("saySomeThing方法ing");
+		return "saySomeThing完成";
 	}
 }

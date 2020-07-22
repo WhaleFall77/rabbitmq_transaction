@@ -15,7 +15,7 @@ import org.springframework.data.redis.core.RedisTemplate;
  * <p><b>Description:</b> RabbitMQ抽象消息监听，所有消息消费者必须继承此类
  * <p><b>Company:</b> 
  *
- * @author created by hongda at 13:26 on 2017-10-24
+ * @author created by wangh at 13:26 on 2020-07-20
  * @version V0.1
  */
 public abstract class AbstractMessageListener implements ChannelAwareMessageListener {

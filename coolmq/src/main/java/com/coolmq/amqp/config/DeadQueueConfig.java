@@ -30,7 +30,7 @@ import com.rabbitmq.client.Channel;
  * 这里只绑定了死信队列。建议每个队列定义自己的QueueConfig
  * <p><b>Company:</b>
  *
- * @author created by fw at 21:54 on 2017-12-23
+ * @author created by wangh at 21:54 on 2020-7-21
  * @version V0.1
  */
 @Configuration

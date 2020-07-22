@@ -39,6 +39,14 @@ public class MessageProviderController {
 		return "sucess";
   }
 
+    @GetMapping("wangTestAnnotaion")
+    public String wanghAnnotaionTest() throws Exception {
+        messageSender.saySomeThing();
+        return "sucess";
+    }
+
+
+
   @GetMapping("testsimplemq")
   @Transactional
   public String testSimpleSender() throws Exception {

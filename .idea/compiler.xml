@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="coolmq" />
-        <module name="microservice-message-demo" />
         <module name="microservice-message-provider" />
+        <module name="microservice-message-demo" />
+        <module name="coolmq" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,7 +19,13 @@
       <module name="microservice-message-daemon" target="1.8" />
       <module name="microservice-message-demo" target="1.5" />
       <module name="microservice-message-provider" target="1.8" />
+      <module name="rabbitmq_transaction" target="1.8" />
       <module name="spring-cloud-microservice-study" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="microservice-message-provider" options="-parameters" />
+    </option>
   </component>
 </project>

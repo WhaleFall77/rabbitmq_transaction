@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
  * <p><b>Description:</b> Rabbit MQ连接工厂配置
  * <p><b>Company:</b> 
  *
- * @author created by hongda at 11:33 on 2017-07-05
+ * @author created by wangh at 11:33 on 2020-07-15
  * @version V0.1
  */
 @Configuration
